@@ -4,62 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clínica a tu Lado</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="pagina_styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   
 
 
-    <title>Document</title>
+<!-- Información del horario -->
+<div class="top-bar">
+  <div class="container">
+    <p class="info-text">Abiertos desde las 8:00am hasta las 23:00pm todos los días</p>
+  </div>
+</div>
 
+<nav class="navbar navbar-expand-md bg-white shadow-sm">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="https://github.com/DiegoPyLL/Pagina_Clinica_a_tu_Lado/blob/main/imagenes/logo.png?raw=true" 
+           alt="Bootstrap" width="70" height="100" class="me-3">
+      <span class="fs-5">Clínica a tu Lado</span>
+    </a>
 
-    <nav class="navbar navbar-expand-sm bg-body-tertiary">
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
-          </a>
-        </div>
+    <!-- Menú -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto"> 
 
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Clínica a tu Lado</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto"> 
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown link
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Pedir Hora</a>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Sobre Nosotros</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Contáctanos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Mi Perfil</a>
+        </li>
 
 
 
+      </ul>      
+    </div>
 
 
-
+  </div>
+</nav>
 </head>
 
 
@@ -67,19 +69,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <body>
-    
+    <video autoplay loop muted playsinline>
+  <source src="imagenes/Video_de_pareja_feliz_en_parque.mp4" type="video/mp4">
+  Tu navegador no soporta videos HTML5.
+</video>
 </body>
 </html>
+
+
