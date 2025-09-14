@@ -1,0 +1,80 @@
+.my-navbar {
+    background-color:antiquewhite;
+}
+
+.col {
+    margin-bottom: 20px; /* espacio vertical entre filas */
+  }
+  
+.carousel-item img{
+    width: 100px;
+    height: 400px;
+    object-fit: cover;
+}
+.card-img-top {
+    width: 100px;
+    height: 200px;
+    object-fit: cover;
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    margin: 20px;
+    color: #333;
+}
+
+/* Tabla principal */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    margin:  auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: white;
+    height: 400px; /* como pusiste en el inline style */
+}
+
+/* Celdas de la tabla */
+td {
+    padding: 15px;
+    vertical-align: top;
+}
+
+/* Ajustar ancho de las celdas */
+td:first-child {
+    width: 40%;
+}
+
+td:last-child {
+    width: 60%;
+}
+
+/* Títulos */
+h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Párrafos */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Ajustar tamaño y bordes de las imágenes del carousel */
+.carousel-inner img {
+    border-radius: 10px;
+    max-height: 350px;
+    object-fit: cover;
+}
+body {
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}

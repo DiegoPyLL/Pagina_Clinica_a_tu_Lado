@@ -1,98 +1,88 @@
-
-/*Variables, para ocupar en validación de formulario*/
+/*Variables para la validación del formulario*/
 var rut = document.getElementById("rut");
-var nombre=document.getElementById("nombre");
+var nombre = document.getElementById("nombre");
 var correo = document.getElementById("correo");
 var nombre_usu = document.getElementById("nombre_usu");
-var contraseña = document.getElementById("password");
-var contraseña = document.getElementById("password2");
+var password = document.getElementById("password");
+var password2 = document.getElementById("password2");
 var telefono = document.getElementById("nro_telefono");
 
 
-/*constantes, para ocupar en la validacion del fromulario*/
+/*Constantes para la validación del formulario*/
 const form = document.getElementById("form");
-const listInputs =document.querySelectorAll(".form-input");
+const listInputs = document.querySelectorAll(".form-input");
 
 
-/* al formulario completo agregamos un evento, con esto evitamos el envio y reseteo del formulario*/
+/* Evitamos el envío del formulario al presionar el botón */
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-   
+});
 
-})
+/* Función de validación */
+function validar() {
+    /* Limpiamos mensajes de error cada vez que se presiona enviar */
+    listInputs.forEach((element) => {
+        element.lastElementChild.innerHTML = "";
+    });
 
-/*funcion validar*/
-function validar(){
+    let todoOk = true;
 
-    /*Cada vez que presiene enviar borrare y vuelvo revisar los mensaje de error*/
-    listInputs.forEach((Element) => {
-        Element.lastElementChild.innerHTML = "";
-        
-        });
-
-        let todoOk = true; // Variable que nos dirá si todo está correcto
-
-        /* if que valida el rango de caracteres en el campo rut */
-    if(rut.value.length > 11 || rut.value.length < 9 || rut.value.trim() =="" ){
-       
-        mostrarMensajeError("rut","Rut debe contener 9 a 11 caracteres");
-        todoOk = false;
-    }   
-       /* if que valida el rango de caracteres en el campo nombre */
-    if(nombre.value.length < 2   || nombre.value.length > 50 ||  nombre.value.trim() =="" ){
-       
-        mostrarMensajeError("nombre","Nombre debe contener 3 a 20 caracteres");
-        todoOk = false;
-    }
-    /* validar formato correo */
-    if(correo.value.trim() === "" || !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(correo.value.trim())) {
-    mostrarMensajeError("correo", "Correo debe tener un formato válido (usuario@dominio.com)");
-    todoOk = false;
-    }
-    /* validar largo correo */
-    if(correo.value.length > 100){
-       
-        mostrarMensajeError("correo","Correo NO debe ser mayor a 100 caracteres");
+    /* Validamos el campo de Rut */
+    if (rut.value.length > 11 || rut.value.length < 9 || rut.value.trim() === "") {
+        mostrarMensajeError("rut", "El Rut debe contener entre 9 y 11 caracteres.");
         todoOk = false;
     }
 
-    /* validar largo usuario y que no sea vacio */
-     if(nombre_usu.value.length < 4 || nombre_usu.value.length > 20 || nombre_usu.value.trim() =="" ){
-       
-        mostrarMensajeError("nombre_usu","Usario debe contener 4 a 20 caracteres");
-        todoOk = false;
-    }   
-    if(password.value.trim().length < 4){
-        mostrarMensajeError("password", "La contraseña debe tener al menos 4 caracteres");
+    /* Validamos el campo de Nombre */
+    if (nombre.value.length < 2 || nombre.value.length > 50 || nombre.value.trim() === "") {
+        mostrarMensajeError("nombre", "El Nombre debe contener entre 2 y 50 caracteres.");
         todoOk = false;
     }
 
-    if(password.value.trim() !== password2.value.trim()){
-        mostrarMensajeError("password2", "Las contraseñas no coinciden");
+    /* Validamos el formato y largo del correo */
+    if (correo.value.trim() === "" || !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(correo.value.trim())) {
+        mostrarMensajeError("correo", "El Correo debe tener un formato válido (ejemplo@dominio.com).");
+        todoOk = false;
+    }
+    if (correo.value.length > 100) {
+        mostrarMensajeError("correo", "El Correo no debe ser mayor a 100 caracteres.");
         todoOk = false;
     }
 
-    if(telefono.value.length > 8 < 12){
-       
-        mostrarMensajeError("nro_telefono","numero de telefono incorrecto");
+    /* Validamos el campo de Usuario */
+    if (nombre_usu.value.length < 4 || nombre_usu.value.length > 20 || nombre_usu.value.trim() === "") {
+        mostrarMensajeError("nombre_usu", "El Usuario debe contener entre 4 y 20 caracteres.");
+        todoOk = false;
+    }
+
+    /* Validamos el campo de Contraseña */
+    if (password.value.trim().length < 4) {
+        mostrarMensajeError("password", "La contraseña debe tener al menos 4 caracteres.");
+        todoOk = false;
+    }
+
+    /* Validamos si las contraseñas coinciden */
+    if (password.value.trim() !== password2.value.trim()) {
+        mostrarMensajeError("password2", "Las contraseñas no coinciden.");
+        todoOk = false;
+    }
+
+    /* Validamos el campo de Teléfono */
+    if (telefono.value.length < 8 || telefono.value.length > 12 || telefono.value.trim() === "") {
+        mostrarMensajeError("telefono", "El número de teléfono debe tener entre 8 y 12 caracteres.");
         todoOk = false;
     }
 
     // Si todo está ok
-    if(todoOk){
+    if (todoOk) {
         alert("¡Todos los campos están correctos!");
-        form.reset(); // Limpia todos los campos del formulario
+        form.reset();
         window.location.href = "perfil.html";
     }
-
-
 }
 
-/* funcion que muestra el mensaje de error en las validaciones */
-function mostrarMensajeError(ClaseInput, mensaje){
-
-        let elemeto = document.querySelector(`.${ClaseInput}`);
-        elemeto.lastElementChild.innerHTML = mensaje;
-        
-   }
-  
+/* Función que muestra el mensaje de error en las validaciones */
+function mostrarMensajeError(ClaseInput, mensaje) {
+    let elemento = document.querySelector(`.${ClaseInput}`);
+    elemento.lastElementChild.innerHTML = mensaje;
+}

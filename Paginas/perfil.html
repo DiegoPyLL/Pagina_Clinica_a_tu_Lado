@@ -1,30 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="estilos.css">
-  <meta charset="UTF-8">
-  <title>Login</title>
+    <link rel="stylesheet" href="estiloPerfil.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <title>vegetta</title>
 </head>
-<body>
-  <form id="loginForm" novalidate>
-    <h2>Iniciar Sesión</h2>
+<table style="width:100%; height: 400px;">
+    <tr>
+      <td style="width: 40%; vertical-align: top;">
+        <!-- Carousel dentro de la celda izquierda -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4zFadPy0RJxGW9KDwEngj5wVK1ZjrdGqu2g&s" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://c.tenor.com/xTvpjzTNfZMAAAAd/despairiounge-cat.gif" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm9I3yyDqWQmn0P5FMyFrJHKKN2oMXFqP2MQ&s" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </td>
+      <td style="width: 60%; vertical-align: top;">
+        
+        <h1>Bio: Rocky</h1>
 
-    <div class="form-input usuario">
-      <label for="usuario">Usuario</label>
-      <input type="text" id="usuario" name="usuario">
-      <p class="mensajeError"></p>
-    </div>
+    <p>Rockyes un perro lleno de energía y amor. Le encanta jugar, correr y disfrutar de largos paseos al aire libre. Es muy sociable y se lleva bien con niños y otros animales. Busca un hogar donde pueda recibir mucho cariño y atención.</p>
+    <h1>Más Información</h1>
+    
 
-    <div class="form-input password">
-      <label for="password">Contraseña</label>
-      <input type="password" id="password" name="password">
-      <p class="mensajeError"></p>
-    </div>
-
-    <button type="submit">Ingresar</button>
-  </form>
-
-  <script src="validacion.js"></script>
-
+        <p>Edad: 3 años
+        Tamaño: Mediano
+        Temperamento: Alegre y cariñoso
+        Vacunas: Al día
+        Salud: Excelente
+        </p>
+      </td>
+    </tr>
+  </table>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
