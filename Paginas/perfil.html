@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <form id="loginForm" novalidate>
+    <h2>Iniciar Sesión</h2>
+
+    <div class="form-input usuario">
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" name="usuario">
+      <p class="mensajeError"></p>
+    </div>
+
+    <div class="form-input password">
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password">
+      <p class="mensajeError"></p>
+    </div>
+
+    <button type="submit">Ingresar</button>
+  </form>
+
+  <script src="validacion.js"></script>
+
+</body>
+</html>

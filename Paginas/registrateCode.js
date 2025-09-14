@@ -82,7 +82,7 @@ function validar(){
     if(todoOk){
         alert("¡Todos los campos están correctos!");
         form.reset(); // Limpia todos los campos del formulario
-        window.location.href = "login.html";
+        window.location.href = "perfil.html";
     }
 
 
