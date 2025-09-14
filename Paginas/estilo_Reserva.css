@@ -1,0 +1,76 @@
+/* Importar una fuente limpia y moderna */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Estilos generales del cuerpo */
+body {
+    background-color: #f0f2f5; /* Fondo gris claro */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Contenedor principal de la lista */
+.a-tula-do-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para mejor visualización */
+}
+
+/* Estilo para cada elemento de la lista */
+.a-tula-do-menu li {
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.a-tula-do-menu li:hover {
+    transform: translateY(-2px); /* Efecto de levitación al pasar el mouse */
+}
+
+/* Estilo para los enlaces de los elementos */
+.a-tula-do-menu li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    color: #333;
+    padding: 16px;
+    border: 1px solid #e0e0e0; /* Borde suave */
+    border-radius: 10px;
+}
+
+/* Estilo del ícono */
+.menu-icon {
+    font-size: 1.8rem;
+    color: #007bff; /* Un azul primario de Bootstrap */
+    margin-right: 15px;
+    width: 30px; /* Ancho fijo para mantener la alineación */
+    text-align: center;
+}
+
+/* Estilo del texto */
+.menu-text {
+    flex-grow: 1;
+}
+
+.menu-text h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 600px) {
+    .a-tula-do-menu {
+        padding: 0 10px;
+    }
+}
