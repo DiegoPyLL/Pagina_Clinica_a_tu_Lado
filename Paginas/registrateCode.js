@@ -77,7 +77,7 @@ function validar() {
     if (todoOk) {
         alert("¡Todos los campos están correctos!");
         form.reset();
-        window.location.href = "perfil.html";
+        window.location.href = "p_perfil.html";
     }
 }
 
