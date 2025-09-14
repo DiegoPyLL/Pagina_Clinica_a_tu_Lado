@@ -1,6 +1,11 @@
 /* Importar fuente hospital moderno */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* para bajarle la posicion */
+.form h2 {
+    margin-top: 0;
+    margin-bottom: rem;
+}
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
