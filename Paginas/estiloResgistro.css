@@ -15,10 +15,6 @@ body {
   justify-content: center;
   align-items: center;
 
-  /* Fondo clínico */
-  background: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a0?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3') no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
 }
 
 /* Overlay azul translúcido */
@@ -34,9 +30,9 @@ body::after {
 /* Contenedor centrado */
 .abs-center {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   width: 100%;
-  max-width: 520px;
+  max-width: 1000px;
   padding: 2rem;
 }
 
