@@ -1,20 +1,25 @@
-/* Aplicar Roboto a toda la página */
+html, body {
+  min-width: 400px;
+  min-height: 600px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Navbar */
+
 .navbar, .navbar .nav-link, .navbar .navbar-brand {
   font-family: 'Roboto', sans-serif;
 }
+
 
 .top-bar {
   background-color: #00B0FF;
   width: 100%;
   display: flex;
   text-align: center;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical */
+  justify-content: center; 
+  align-items: center;     
   padding: 0.5rem;
   
 }
@@ -22,9 +27,13 @@ body {
 .top-bar .info-text {
   color: rgb(255, 255, 255);
   margin: 0;
-  font-size: 1.5rem;           /* tamaño del texto, puedes ajustar */
+  font-size: 1.5rem;           
 }
 
+.navbar-brand span {
+  font-size: 2rem; 
+  font-weight: bold;
+}
 
 
 /* Navbar */
@@ -72,7 +81,91 @@ body {
 }
 
 
+.mi-navbar {
+    background-color: #ffffff; 
+}
 
+.navbar-custom {
+  background-color: #000000; /* color personalizado */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-right: 1rem;
+  transition: color 0.1s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #8ead45; 
+}
+
+.boton-reserva {
+  display: block;
+  margin: 2rem auto;   /* centra horizontalmente y margen vertical */
+  padding: 1rem 4rem;  /* más grande */
+  font-size: 1.5rem;   /* texto más grande */
+  border-radius: 50px; /* bordes redondeados */
+  width: 50%;          /* ancho relativo, ajustar si quieres más */
+  text-align: center;
+  background-color: #007bff; /* azul */
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.boton-reserva:hover {
+  background-color: #0056b3; /* azul más oscuro al pasar el mouse */
+}
+
+
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.carousel-item {
+  position: relative;         
+  transition: transform 0.1s ease-in-out; 
+}
+
+
+.texto-sobre-imagen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  z-index: 10;
+  text-align: center;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  background: transparent;
+  background-size: 0.5%, 0.5%;   
+  border: none;              
+  width: 5%;                 
+}
+
+
+
+
+
+
+  .card {
+    max-width: 500px;   /* tamaño más chico */
+  }
+
+  .staggered:nth-child(odd) {
+    margin-top: 30px;   /* escalonado */
+  }
 
 
 
