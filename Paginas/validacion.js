@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // simulamos login válido con usuario "admin" y pass "1234"
     if (valido) {
-      if (usuario.value === "admin" && password.value === "1234") {
+      if (usuario.value === "bast" && password.value === "goku") {
        
         // redirigir a otra página
         window.location.href = "p_principal.html";
