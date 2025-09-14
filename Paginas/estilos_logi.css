@@ -123,3 +123,18 @@ body::after {
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(0, 176, 255, 0.45);
 }
+
+.logo {
+    position: absolute; /* Permite posicionar la imagen con respecto a la ventana del navegador */
+    top: 20px;         /* Distancia desde la parte superior */
+    left: 20px;        /* Distancia desde la izquierda */
+    width: 100px;      /* Ancho de la imagen */
+    height: auto;      /* Mantiene la proporción de la imagen */
+}
+
+/* Opcional: Centra el formulario para que la imagen quede en la esquina */
+form {
+    /* ... otros estilos de tu formulario */
+    position: relative; /* Para que la imagen se posicione en relación al formulario */
+    margin: 50px auto; /* Centra el formulario en la página */
+}
