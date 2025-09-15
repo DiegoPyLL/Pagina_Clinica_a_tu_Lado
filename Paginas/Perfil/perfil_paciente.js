@@ -7,5 +7,5 @@ document.getElementById('perfilPacienteForm').addEventListener('submit', functio
     console.log('Guardando cambios...');
 
     // Después de guardar, redirige a la nueva página
-    window.location.href = "p_Principal.html";
+    window.location.href = "../PaginaPrincipal/p_principal.html";
 });
