@@ -68,9 +68,15 @@ function validar() {
     }
 
     /* Validamos el campo de Teléfono */
-    if (telefono.value.length < 8 || telefono.value.length > 12 || telefono.value.trim() === "") {
-        mostrarMensajeError("telefono", "El número de teléfono debe tener entre 8 y 12 caracteres.");
-        todoOk = false;
+    // Expresión regular para validar el formato +569 seguido de 8 dígitos
+    const regexTelefonoChile = /^\+569\d{8}$/;
+
+    // Obtenemos el valor del campo y eliminamos espacios en blanco al inicio o final
+    const valorTelefono = telefono.value.trim();
+
+    if (!regexTelefonoChile.test(valorTelefono)) {
+    mostrarMensajeError("telefono", "El formato es incorrecto. Debe ser +569 seguido de 8 dígitos (ej: +56912345678).");
+    todoOk = false;
     }
 
     // Si todo está ok
