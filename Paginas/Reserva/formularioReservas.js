@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const valorTelefono = telefono.value.trim();
 
         if (!regexTelefonoChile.test(valorTelefono)) {
-            // CORRECCIÓN 1: Nombre de la función corregido
             mostrarError("telefono", "El formato es incorrecto. Debe ser +569 seguido de 8 dígitos (ej: +56912345678).");
             valido = false;
         }

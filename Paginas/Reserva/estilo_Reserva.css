@@ -263,3 +263,102 @@ body {
     min-height: 1em; /* Evita que el diseño "salte" cuando aparece un mensaje */
 }
 
+/* --- Estilos para el Formulario de Reserva de Hora --- */
+
+/* Título "Reserva tu Hora Médica" */
+.titulo {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Contenedor que centra la tarjeta del formulario */
+.wrap {
+    max-width: 500px; /* Un poco más ancho para este formulario */
+    margin: 0 auto 60px auto; /* Centrar y dar espacio inferior */
+}
+
+/* Tarjeta que contiene el formulario, aplicando el estilo principal */
+.wrap .card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    border: none; /* Bootstrap puede añadir un borde, lo quitamos */
+}
+
+/* Cuerpo de la tarjeta con espaciado interno */
+.wrap .card-body {
+    padding: 35px;
+}
+
+/* Contenedor de cada campo (label + input/select) */
+.campo {
+    margin-bottom: 22px;
+    text-align: left; /* Alineamos las etiquetas a la izquierda */
+}
+
+/* Etiquetas de los campos */
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Estilo unificado para TODOS los campos del formulario */
+.campo select,
+.campo input[type="date"],
+.campo input[type="time"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif; /* Asegurar consistencia en la fuente */
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none; /* Quitar apariencia por defecto (importante para selects) */
+}
+
+/* Flecha personalizada para los <select> */
+.campo select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px 12px;
+}
+
+/* Efecto de foco para TODOS los campos */
+.campo select:focus,
+.campo input[type="date"]:focus,
+.campo input[type="time"]:focus {
+    outline: none;
+    border-color: var(--accent, #00B0FF);
+    box-shadow: 0 0 0 3px rgba(0, 176, 255, 0.25);
+}
+
+/* Contenedor del botón de confirmación */
+.boton {
+    margin-top: 10px;
+}
+
+/* Botón "Confirmar Reserva" */
+.boton-reserva {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--accent, #00B0FF);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efecto hover para el botón */
+.boton-reserva:hover {
+    background-color: #008fcc;
+    transform: translateY(-2px);
+}
