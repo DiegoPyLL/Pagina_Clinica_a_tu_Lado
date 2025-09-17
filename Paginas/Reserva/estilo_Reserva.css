@@ -180,75 +180,86 @@ body {
 
 
 
+/* --- Estilos para el Formulario de Reserva --- */
 
-
-
-
-
-
-
-
-
-
-/* ---------------------- */
-/* FORMULARIO RESERVA     */
-/* ---------------------- */
-.titulo {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #333;
+/* Contenedor principal del formulario */
+#ReservaForm {
+    max-width: 450px; /* Ancho máximo para que se vea bien en pantallas grandes */
+    margin: 60px auto; /* Centrar el formulario horizontalmente y darle espacio vertical */
+    padding: 35px; /* Espacio interior generoso */
+    background-color: #ffffff; /* Fondo blanco para el efecto de tarjeta */
+    border-radius: 12px; /* Bordes bien redondeados */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+    border: 1px solid #e0e0e0;
 }
 
-.formulario {
-  padding: 20px;
+/* Título del formulario (DATOS PARA LA RESERVA) */
+#ReservaForm h2 {
+    text-align: center; /* Centrar el título */
+    color: #333; /* Color de texto oscuro */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    font-weight: 700; /* Letra más gruesa */
 }
 
-.campo {
-  margin-bottom: 20px;
-  text-align: left;
+/* Contenedor de cada campo (label + input + p) */
+.form-input {
+    margin-bottom: 22px; /* Espacio entre cada campo */
 }
 
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333;
+/* Etiquetas de los campos (Nombre, Contraseña, etc.) */
+.form-input label {
+    display: block; /* Para que la etiqueta ocupe su propia línea */
+    margin-bottom: 8px; /* Espacio entre la etiqueta y el campo de texto */
+    color: #555; /* Color de texto un poco más suave */
+    font-weight: 500;
 }
 
-select,
-input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
+/* Campos de texto y contraseña */
+.form-input input[type="text"],
+.form-input input[type="password"] {
+    width: 100%; /* Ocupar todo el ancho disponible */
+    padding: 14px 16px; /* Espaciado interno para que el texto no pegue a los bordes */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave para el foco */
 }
 
-.boton {
-  margin-top: 20px;
-  text-align: center;
+/* Efecto al hacer clic en un campo (foco) */
+.form-input input[type="text"]:focus,
+.form-input input[type="password"]:focus {
+    outline: none; /* Quitar el borde azul por defecto del navegador */
+    border-color: var(--accent, #00B0FF); /* Cambiar el color del borde al color de acento */
+    box-shadow: 0 0 0 3px rgba(0, 176, 255, 0.25); /* Sombra exterior suave para resaltar */
 }
 
-/* Botón de confirmar usa el estilo que ya definiste */
-.boton-reserva {
-  display: block;
-  margin: 2rem auto;
-  padding: 1rem 6rem;
-  font-size: 1.2rem;
-  border-radius: 50px;
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
+/* Botón "Ingresar" */
+#ReservaForm button[type="submit"] {
+    width: 100%; /* Ocupar todo el ancho */
+    padding: 15px;
+    background-color: var(--accent, #00B0FF); /* Color de fondo principal (tomado de tus variables) */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer; /* Cambia el cursor a una manito */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+    margin-top: 10px; /* Espacio arriba del botón */
 }
 
-.boton-reserva:hover {
-  background-color: #0056b3;
+/* Efecto al pasar el mouse sobre el botón */
+#ReservaForm button[type="submit"]:hover {
+    background-color: #008fcc; /* Un tono un poco más oscuro del color de acento */
+    transform: translateY(-2px); /* Eleva ligeramente el botón para dar feedback */
+}
+
+/* Párrafo para los mensajes de error */
+.mensajeError {
+    color: #d93025; /* Color rojo estándar para los errores */
+    font-size: 0.875rem; /* Letra un poco más pequeña */
+    margin-top: 6px; /* Espacio sobre el mensaje de error */
+    min-height: 1em; /* Evita que el diseño "salte" cuando aparece un mensaje */
 }
 
