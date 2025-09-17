@@ -126,10 +126,13 @@ a:hover {
 
 /* carrusel */
 .carousel-item img {
-  height: 600px;
-  object-fit: cover;
-  object-position: center;
+  width: 90%;              /* ancho al 90% */
+  margin: 0 auto;          /* centra la imagen */
+  height: 600px;           /* altura fija (ajusta según necesites) */
+  object-fit: cover;       /* para que no se deforme */
+  border-radius: 15px;     /* opcional, esquinas redondeadas */
 }
+
 
 .carousel-item {
   position: relative;         
@@ -143,6 +146,13 @@ a:hover {
   width: 5%;
 }
 
+.carousel-item video {
+  width: 90%;
+  margin: 0 auto;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+}
 
 
 
