@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (usuario.value === "user" && password.value === "1234") {
        
         // redirigir a otra página
-        window.location.href = "p_formularioReserva.html";
+        window.location.href = "p_pedirHora.html";
       } else {
         mostrarError("password", "nombre o contraseña incorrectos");
       }
