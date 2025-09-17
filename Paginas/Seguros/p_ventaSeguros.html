@@ -1,30 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clínica a tu Lado</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../PaginaPrincipal/p_principal.html">
+  <link rel="stylesheet" href="stylesSeguros.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
-<header>
-  <!-- Información del horario -->
-  <div class="top-bar">
-    <div class="container">
-      <p class="info-text">Abiertos desde las 8:00am hasta las 23:00pm todos los días</p>
-    </div>
-  </div>
-
+<header style="padding-bottom: 100px;">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-md bg-white shadow-sm fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="../PaginaPrincipal/p_principal.html">
         <img src="https://github.com/DiegoPyLL/Pagina_Clinica_a_tu_Lado/blob/main/imagenes/logo.png?raw=true" 
-             alt="Bootstrap" width="85" height="100" class="me-3">
+             alt="Logo" width="85" height="100" class="me-3">
         <span class="fs-2 fw-bold">Clínica a tu Lado</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -45,6 +39,144 @@
   </nav>
 </header>
 
+<h1 class="text-center my-4">Nuestros Seguros</h1>
+
+<!-- Función para simplificar video carrusel -->
+<style>
+  .carousel-video {
+    width: 80%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+</style>
+
+<!-- Seguro de Vida -->
+<h2 class="my-3">Seguros de Vida</h2>
+<div id="carouselVida" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner text-center">
+    <div class="carousel-item active">
+      <a href="formulario.html?seguro=Vida+Premium">
+        <video class="carousel-video" src="https://videos.openai.com/vg-assets/assets%2Ftask_01jne54pjefqja4kh9xbt96yev%2Ftask_01jne54pjefqja4kh9xbt96yev_genid_d880bea4-f659-4e32-bc7f-17513e5dad92_25_03_03_14_16_865271%2Fvideos%2F00000_458554665%2Fsource.mp4" autoplay muted loop playsinline></video>
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Vida Premium</h5>
+        <p>Cobertura completa para ti y tu familia, incluye invalidez y fallecimiento.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="formulario.html?seguro=Vida+Estándar">
+        <video class="carousel-video" src="https://videos.openai.com/vg-assets/assets%2Ftask_01jne54pjefqja4kh9xbt96yev%2Ftask_01jne54pjefqja4kh9xbt96yev_genid_d880bea4-f659-4e32-bc7f-17513e5dad92_25_03_03_14_16_865271%2Fvideos%2F00000_458554665%2Fsource.mp4" autoplay muted loop playsinline></video>
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Vida Estándar</h5>
+        <p>Protección económica básica, ideal para quienes buscan seguridad accesible.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="formulario.html?seguro=Vida+Joven">
+        <video class="carousel-video" src="https://videos.openai.com/vg-assets/assets%2Ftask_01jne54pjefqja4kh9xbt96yev%2Ftask_01jne54pjefqja4kh9xbt96yev_genid_d880bea4-f659-4e32-bc7f-17513e5dad92_25_03_03_14_16_865271%2Fvideos%2F00000_458554665%2Fsource.mp4" autoplay muted loop playsinline></video>
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Vida Joven</h5>
+        <p>Seguro económico con cobertura adaptada a menores de 35 años.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselVida" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselVida" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+<!-- Seguro Familiar -->
+<h2 class="my-3">Seguros Familiares</h2>
+<div id="carouselFamiliar" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner text-center">
+    <div class="carousel-item active">
+      <a href="formulario.html?seguro=Familiar+Total">
+        <video class="carousel-video" src="https://videos.openai.com/vg-assets/assets%2Ftask_01jne54pjefqja4kh9xbt96yev%2Ftask_01jne54pjefqja4kh9xbt96yev_genid_d880bea4-f659-4e32-bc7f-17513e5dad92_25_03_03_14_16_865271%2Fvideos%2F00000_458554665%2Fsource.mp4" autoplay muted loop playsinline></video>
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Familiar Total</h5>
+        <p>Cobertura completa para todos los miembros de la familia, incluye accidentes y salud.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="formulario.html?seguro=Familiar+Estándar">
+        <video class="carousel-video" src="https://videos.openai.com/vg-assets/assets%2Ftask_01jne54pjefqja4kh9xbt96yev%2Ftask_01jne54pjefqja4kh9xbt96yev_genid_d880bea4-f659-4e32-bc7f-17513e5dad92_25_03_03_14_16_865271%2Fvideos%2F00000_458554665%2Fsource.mp4" autoplay muted loop playsinline></video>
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Familiar Estándar</h5>
+        <p>Protección básica para padres e hijos, cobertura hospitalaria y consultas médicas.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="formulario.html?seguro=Familiar+Junior">
+        <video class="carousel-video" src="https://videos.openai.com/vg-assets/assets%2Ftask_01jne54pjefqja4kh9xbt96yev%2Ftask_01jne54pjefqja4kh9xbt96yev_genid_d880bea4-f659-4e32-bc7f-17513e5dad92_25_03_03_14_16_865271%2Fvideos%2F00000_458554665%2Fsource.mp4" autoplay muted loop playsinline></video>
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Familiar Junior</h5>
+        <p>Seguro pensado para familias con hijos menores de 18 años.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselFamiliar" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselFamiliar" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+<!-- Seguro de Salud -->
+<h2 class="my-3">Seguros de Salud</h2>
+<div id="carouselSalud" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner text-center">
+    <div class="carousel-item active">
+      <a href="formulario.html?seguro=Salud+Premium">
+        <video class="carousel-video" src="https://videos.openai.com/vg-assets/assets%2Ftask_01jne54pjefqja4kh9xbt96yev%2Ftask_01jne54pjefqja4kh9xbt96yev_genid_d880bea4-f659-4e32-bc7f-17513e5dad92_25_03_03_14_16_865271%2Fvideos%2F00000_458554665%2Fsource.mp4" autoplay muted loop playsinline></video>
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Salud Premium</h5>
+        <p>Consultas ilimitadas, hospitalización y emergencias en todo el país.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="formulario.html?seguro=Salud+Estándar">
+        <video class="carousel-video" src="https://videos.openai.com/vg-assets/assets%2Ftask_01jne54pjefqja4kh9xbt96yev%2Ftask_01jne54pjefqja4kh9xbt96yev_genid_d880bea4-f659-4e32-bc7f-17513e5dad92_25_03_03_14_16_865271%2Fvideos%2F00000_458554665%2Fsource.mp4" autoplay muted loop playsinline></video>
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Salud Estándar</h5>
+        <p>Cobertura básica con consultas y medicamentos esenciales.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="formulario.html?seguro=Salud+Express">
+        <video class="carousel-video" src="https://videos.openai.com/vg-assets/assets%2Ftask_01jne54pjefqja4kh9xbt96yev%2Ftask_01jne54pjefqja4kh9xbt96yev_genid_d880bea4-f659-4e32-bc7f-17513e5dad92_25_03_03_14_16_865271%2Fvideos%2F00000_458554665%2Fsource.mp4" autoplay muted loop playsinline></video>
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Salud Express</h5>
+        <p>Atención rápida y económica, ideal para jóvenes y estudiantes.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselSalud" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselSalud" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
 
 
 
@@ -58,74 +190,22 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer class="bg-dark text-white pt-5 pb-3">
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-3" style="padding-bottom: 500px; padding-top: 100px;">
   <div class="container">
     <div class="row">
-      <!-- Sobre nosotros -->
-    <div class="col-md-3 mb-3">
-        <a href="../PaginaPrincipal/p_sobreNosotros.html" style="color: white;  text-decoration: none"><h5>Sobre Nosotros</h5></a>        
+      <div class="col-md-3 mb-3">
+        <a href="../PaginaPrincipal/p_sobreNosotros.html" style="color: white; text-decoration: none"><h5>Sobre Nosotros</h5></a>
         <p>Somos una clínica dedicada a tu bienestar, ofreciendo servicios médicos y seguros confiables.</p>
       </div>
-
-      <!-- Dirección -->
       <div class="col-md-3 mb-3">
         <h5>Dirección</h5>
         <p>Av. San Marino 1550<br>Santiago de Chile</p>
       </div>
-
-      <!-- Contáctanos -->
       <div class="col-md-3 mb-3">
         <h5>Contáctanos</h5>
         <p>Teléfono: +56 2 9077 1151<br>Email: contacto@atl_clinica.com</p>
       </div>
-
-      <!-- Términos y redes -->
       <div class="col-md-3 mb-3">
         <h5>Términos y Redes</h5>
-        <p><a href="#" class="text-white text-decoration-none">Términos y Condiciones</a></p>
-        <div class="d-flex gap-2">
-          <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-3">
-      <small>&copy; 2025 Clínica a tu Lado. Todos los derechos reservados.</small>
-    </div>
-  </div>
-</footer>
-
-<!-- redes sociales -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-
-
-
-</body>
-</html>
+        <p><a href="#"
