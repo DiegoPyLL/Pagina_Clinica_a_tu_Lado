@@ -91,19 +91,34 @@ a:hover {
   transform: scaleX(1);
 }
 
-/* Texto sobre imagen ocupa todo el ancho */
+
+
+
+/* Texto sobre imagen */
 .texto-sobre-imagen {
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70%;
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-  z-index: 10;
+  z-index: 5;   /* MENOR que los controles */
   text-align: center;
+  pointer-events: none; /* deja pasar clics */
+}
+
+.texto-sobre-imagen a,
+.texto-sobre-imagen button {
+  pointer-events: auto; /* los botones/enlaces siguen siendo clickeables */
+}
+
+/* Asegurar que los controles del carrusel estén encima */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 100;   /* más alto que el overlay */
 }
 
 
