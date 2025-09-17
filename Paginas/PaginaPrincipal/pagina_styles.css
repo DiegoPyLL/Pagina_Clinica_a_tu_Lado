@@ -13,7 +13,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
+/* Contenedor de sección */
+.row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
 
 
@@ -244,17 +250,16 @@ a:hover {
   padding: 0 18px;
 }
 
-h1 {
-  margin: 0 0 18px;
-  font-weight: 600;
-}
+
 
 /* Grid collage */
 .collage {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 140px;
+  grid-auto-rows: 350px; /* altura consistente para que items entren en viewport */
   gap: var(--gap);
+  padding: 2px;
+  object-position: center;
 }
 
 .item {
@@ -273,6 +278,7 @@ h1 {
 .item.span-3 { grid-column: span 3; }
 .item.span-8 { grid-column: span 8; }
 .item.span-9 { grid-column: span 9; }
+.item.span-12 { grid-column: span 12; }
 
 .item img {
   width: 100%;
