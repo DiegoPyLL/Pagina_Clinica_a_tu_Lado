@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../Seguros/estilo2Seguros.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="seguros_vida.js"></script>
 </head>
 
 <body>
@@ -43,49 +44,55 @@
 
 
 <div class="form-container">
-    <form>
+ 
+    <div id="mensaje-exito" style="display: none; background-color: #d1e7dd; color: #0f5132; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2rem;">
+        <strong>¡Contratación exitosa!</strong><br>
+        Hemos recibido tus datos y nos pondremos en contacto contigo a la brevedad.
+    </div>
+
+    <form id="seguro-form">
         <header class="form-header">
             <h1>Planificador de salud</h1>
             <p>Ingresa los datos del contratante</p>
         </header>
 
-
         <section class="form-section">
             <h2>Datos asegurado</h2>
             <div class="form-row">
-                <div class="form-field has-error">
+                <div class="form-field">
                     <label for="rut">Rut</label>
                     <input type="text" id="rut" name="rut" placeholder="Ej. 11.111.111-k">
-                    <span class="error-message">Requerido</span>
+                    <span class="error-message"></span>
                 </div>
                 <div class="form-field">
                     <label for="nombres">Nombres y apellidos</label>
                     <input type="text" id="nombres" name="nombres" placeholder="Ej. Jose Perez">
+                    <span class="error-message"></span>
                 </div>
-                <div class="form-field has-error">
+                <div class="form-field">
                     <label for="fecha-nacimiento">Fecha de nacimiento</label>
                     <input type="text" id="fecha-nacimiento" name="fecha-nacimiento" placeholder="Ej: 01/01/2000" onfocus="(this.type='date')" onblur="(this.type='text')">
-                    <span class="error-message">Requerido</span>
+                    <span class="error-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-field">
                     <label for="email">Ingrese su correo electrónico</label>
                     <input type="email" id="email" name="email" placeholder="Ej. correo@dominio.cl">
+                    <span class="error-message"></span>
                 </div>
                 <div class="form-field">
                     <label for="celular">Ingrese número de celular</label>
                     <input type="tel" id="celular" name="celular" placeholder="Ej. +56987654321">
+                    <span class="error-message"></span>
                 </div>
             </div>
         </section>
-
 
         <hr class="separator">
 
         <section class="form-section">
             <h2>Resumen de tu Seguro</h2>
-            
             <div class="summary-box">
                 <div class="summary-item">
                     <span>Plan seleccionado</span>
@@ -109,7 +116,7 @@
                         <option value="tarjeta-debito">Tarjeta de débito</option>
                         <option value="transferencia">Transferencia bancaria</option>
                     </select>
-                     <span class="error-message">Requerido</span>
+                    <span class="error-message"></span>
                 </div>
             </div>
         </section>
@@ -121,21 +128,20 @@
                     He leído y acepto los <a href="/terminos-y-condiciones" target="_blank">Términos y Condiciones</a> del servicio.
                 </label>
             </div>
-             <span class="error-message">Debes aceptar los términos para continuar.</span>
+            <span class="error-message"></span>
         </section>
 
         <div class="form-actions">
             <button type="submit" class="btn-submit">Confirmar Contratación</button>
             <button type="reset" class="btn-reset">Limpiar</button>
         </div>
-        
     </form>
 </div>
 
 
 
 
-  <script src="script.js"></script>
+  <script src="seguros_vida.js"></script>
 
 
 
