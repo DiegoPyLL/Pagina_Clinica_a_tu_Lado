@@ -1,25 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     
-    // Seleccionar el formulario por su ID
     const form = document.getElementById('seguro-form');
+    // ✨ NUEVO: Obtener la instancia del Modal de Bootstrap
+    const modalConfirmacion = new bootstrap.Modal(document.getElementById('modalConfirmacion'));
 
-    // Escuchar el evento 'submit' del formulario
     form.addEventListener('submit', function (event) {
         
-        // 1. Prevenir el envío real del formulario para manejarlo con JS
         event.preventDefault();
-
-        // 2. Limpiar errores previos (opcional pero recomendado)
         limpiarErrores();
         
-        // 3. Validar el formulario antes de guardar los datos
         if (!validarFormulario()) {
-            console.log('El formulario contiene errores, no se guardarán los datos.');
-            return; // Detiene la ejecución si hay errores
+            console.log('El formulario contiene errores.');
+            return;
         }
         
-        // 4. Guardar los datos del formulario en variables
-        // Se crea un objeto 'datosContrato' para agrupar todo de forma ordenada
         const datosContrato = {
             rut: document.getElementById('rut').value,
             nombres: document.getElementById('nombres').value,
@@ -32,27 +26,26 @@ document.addEventListener('DOMContentLoaded', function () {
             aceptaTerminos: document.getElementById('terminos').checked
         };
         
-        // (Opcional) Mostrar los datos guardados en la consola para verificar
         console.log('Datos del contrato guardados:', datosContrato);
         
-        // 5. Mostrar el mensaje de "Seguro Comprado"
-        // Oculta el formulario y muestra un mensaje de éxito
-        const formContainer = document.querySelector('.form-container');
-        formContainer.innerHTML = `
-            <div class="mensaje-exito">
-                <strong>¡Felicidades, ${datosContrato.nombres}!</strong><br>
-                Tu "${datosContrato.planNombre}" ha sido contratado con éxito.
-                <p style="font-size: 1rem; margin-top: 15px;">Recibirás una copia de la póliza en tu correo: ${datosContrato.email}</p>
-            </div>
-        `;
+        // --- ✨ CAMBIO PRINCIPAL: MOSTRAR EL POP-UP ---
+        
+        // 1. Personalizar el mensaje dentro del pop-up
+        const mensajeCuerpo = document.getElementById('mensaje-modal-cuerpo');
+        mensajeCuerpo.innerHTML = `¡Gracias por contratar nuestro seguro, <strong>${datosContrato.nombres}</strong>! <br><br> Te hemos enviado un correo a <strong>${datosContrato.email}</strong> con los detalles de tu póliza.`;
+
+        // 2. Mostrar el pop-up
+        modalConfirmacion.show();
+
+        // 3. Limpiar el formulario para una nueva contratación
+        form.reset();
     });
     
-    // --- Funciones de Ayuda para la Validación ---
+    // --- Funciones de Ayuda para la Validación (sin cambios) ---
     
     function validarFormulario() {
         let esValido = true;
         
-        // Validar campos uno por uno
         if (!validarRut(document.getElementById('rut').value)) {
             mostrarError('rut', 'El RUT no es válido.');
             esValido = false;
@@ -98,10 +91,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function validarRut(rutCompleto) {
-        if (!/^[0-9]+-[0-9kK]{1}$/.test(rutCompleto)) return false;
-        const [rut, dv] = rutCompleto.split('-');
-        let M = 0, S = 1;
-        for (; rut; S = (S + rut % 10 * (9 - M++ % 6)) % 11);
-        return String(S ? S - 1 : 'k') === dv.toLowerCase();
+        if (!rutCompleto) return false;
+        const rutLimpio = rutCompleto.replace(/\./g, '').trim();
+        if (!/^[0-9]+-[0-9kK]{1}$/.test(rutLimpio)) return false;
+        const [cuerpo, dv] = rutLimpio.split('-');
+        const dvMinuscula = dv.toLowerCase();
+        let suma = 0;
+        let multiplicador = 2;
+        for (let i = cuerpo.length - 1; i >= 0; i--) {
+            suma += parseInt(cuerpo.charAt(i)) * multiplicador;
+            multiplicador = multiplicador === 7 ? 2 : multiplicador + 1;
+        }
+        const resto = suma % 11;
+        const dvEsperado = 11 - resto;
+        let dvCalculado = String(dvEsperado);
+        if (dvEsperado === 11) dvCalculado = '0';
+        else if (dvEsperado === 10) dvCalculado = 'k';
+        return dvMinuscula === dvCalculado;
     }
 });

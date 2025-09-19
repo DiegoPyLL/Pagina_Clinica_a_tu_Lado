@@ -125,7 +125,7 @@
             <div class="form-field-checkbox">
                 <input type="checkbox" id="terminos" name="terminos" required>
                 <label for="terminos">
-                    He leído y acepto los <a href="/terminos-y-condiciones" target="_blank">Términos y Condiciones</a> del servicio.
+                    He leído y acepto los <a href="terminos_condiciones.html" target="_blank">Términos y Condiciones</a> del servicio.
                 </label>
             </div>
             <span class="error-message"></span>
@@ -220,6 +220,24 @@
 
 
 
+<!-- Modal de Confirmación -->
+<div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">✅ ¡Contratación Exitosa!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="mensaje-modal-cuerpo"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<script src="seguros_vida.js"></script>
 </body>
 </html>
