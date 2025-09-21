@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         console.log('Datos del contrato guardados:', datosContrato);
         
-        // --- ✨ CAMBIO PRINCIPAL: MOSTRAR EL POP-UP ---
+     
         
         // 1. Personalizar el mensaje dentro del pop-up
         const mensajeCuerpo = document.getElementById('mensaje-modal-cuerpo');
