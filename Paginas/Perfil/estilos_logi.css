@@ -9,10 +9,6 @@ body {
   justify-content: center;
   align-items: center;
 
-  /* Imagen de fondo con hospital moderno */
-  background: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a0?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3') no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
 }
 
 /* Overlay azul translúcido para dar sensación clínica */
